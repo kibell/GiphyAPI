@@ -1,4 +1,25 @@
+//create an array of choices
+
+const choices = ['Really Bro?', 'High five!','Way to go']
+
+
 // call the ajax function and set the varibles for the url 
+// function getGif(){
+
+    const giphy = $(this).attr('data-name');
+    
+    const queryURL = `https://api.giphy.com/v1/gifs/random?api_key=do2zG5Nm1SN1Ioh0tMOY6mXWryN8X5yZ&tag=${giphy}&rating=PG-13`
+
+
+    $.ajax({
+        url: queryURL,
+        method: 'GET'
+    }).then(function(response){
+
+        console.log(response)
+    });
+
+
 
 
 //create a div to hold the images
