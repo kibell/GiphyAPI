@@ -17,12 +17,20 @@ function getGif(){
     }).then(function(response){
 
         console.log(response)
+        
+//create a div to hold the images
         const newDiv = $("<div class ='giphy'>")
+        //const the url image 
         const imageUrl = response.data.image_original_url
+
         const newImage = $('<img>')
+//and the attribute to the images so that they are changed when they are called
+
 
         newImage.attr('src',imageUrl)
-        
+//prepend the images to a div
+
+
         $('#images').prepend(newImage)
 
 
@@ -32,35 +40,24 @@ function getGif(){
 }
 
 
-//create a div to hold the images
-
-
-//const the url image 
-
-
-
-//and the attribute to the images so that they are changed when they are called
-
-
-
-//prepend the images to a div
-
 
 
 //create a loop append a new button when the search button is selected
+function buttonLoop () {
 
-
+    $('#myButton').empty();
+    for ( let i =0; i < giphy.length; i++){
 //varibale for a new button
-
+const btn = $('<button>');
 //add a class to the new button
-
+btn.addClass('new-button')
 //add a data attribute
-
+btn.attr("data-name",giphy[i])
 //label the new button that was created
-
-//append the button in the end
-
-
-
+btn.text(giphy[i]);
+//appen("d the button in the end
+$('#myButton').append(btn);
+}
+}
 //create a function to push the input to an array
 
