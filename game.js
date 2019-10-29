@@ -4,7 +4,7 @@ const choices = ['Really Bro?', 'High five!','Way to go']
 
 
 // call the ajax function and set the varibles for the url 
-// function getGif(){
+function getGif(){
 
     const giphy = $(this).attr('data-name');
     
@@ -17,9 +17,19 @@ const choices = ['Really Bro?', 'High five!','Way to go']
     }).then(function(response){
 
         console.log(response)
+        const newDiv = $("<div class ='giphy'>")
+        const imageUrl = response.data.image_original_url
+        const newImage = $('<img>')
+
+        newImage.attr('src',imageUrl)
+        
+        $('#images').prepend(newImage)
+
+
+
     });
 
-
+}
 
 
 //create a div to hold the images
