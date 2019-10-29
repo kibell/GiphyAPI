@@ -76,3 +76,7 @@ buttonLoop();
 
 
 });
+
+$(document).on("click", "#addBtn", getGif);
+
+buttonLoop();
