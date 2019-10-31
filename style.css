@@ -9,9 +9,37 @@
 .jumbotron{
 background: linear-gradient(to left, skyblue,white);
 font-family: 'McLaren', cursive;
+opacity: .75;
 
 }
 
 h1, .lead{
   text-align: center;
+}
+
+.sticker, .giphy{
+  font-family: 'McLaren', cursive;
+  font-weight: 700px;
+  font-size: 55px;
+  color:white
+  
+
+}
+.sticker{
+  background: darkblue;
+  color:white;
+  opacity: .75;
+}
+
+.giphy{
+  background: skyblue;
+  color:gold;
+  opacity: .75;
+}
+
+.sticky{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
