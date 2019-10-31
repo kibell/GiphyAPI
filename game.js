@@ -5,7 +5,8 @@ const choices = ['Naruto', 'Dragon Ball Z','One Piece']
 
 // call the ajax function and set the varibles for the url 
 function getGif() {
-
+    event.preventDefault();
+    
 const ttt = $(this).attr("data-name");
     const queryURL = `https://api.giphy.com/v1/gifs/random?api_key=do2zG5Nm1SN1Ioh0tMOY6mXWryN8X5yZ&tag=${ttt}&rating=PG-13`;
     $.ajax({
@@ -38,7 +39,8 @@ const ttt = $(this).attr("data-name");
 }
 
 function getSticker() {
-
+    event.preventDefault();
+    
     const ttt = $(this).attr("data-name");
         const queryURL = `https://api.giphy.com/v1/stickers/random?api_key=do2zG5Nm1SN1Ioh0tMOY6mXWryN8X5yZ&tag=${ttt}&rating=PG-13`;
         $.ajax({
@@ -62,7 +64,7 @@ function getSticker() {
     //prepend the images to a div
     
     
-            $('#images').prepend(newImage)
+            $('#sticker').prepend(newImage)
     
     
     
