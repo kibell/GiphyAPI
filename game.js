@@ -19,7 +19,7 @@ const ttt = $(this).attr("data-name");
 //create a div to hold the images
        
         //const the url image 
-        const imageUrl = response.data.image_original_url
+        const imageUrl = response.data.images.original_still.url
 
         const newImage = $('<img>');
 //and the attribute to the images so that they are changed when they are called
@@ -27,16 +27,47 @@ const ttt = $(this).attr("data-name");
 
         newImage.attr('src',imageUrl)
         newImage.attr('alt', "new");
+        newImage.attr('id', 'gifTouch')
+        newImage.addClass("still")
 //prepend the images to a div
-
 
         $('#GIF').prepend(newImage)
 
 
 
+
+        $(document).on("click",'#gifTouch',function(){
+            const state = $(this).attr("class")
+            const imageUrl = response.data.image_original_url
+        
+            if (state === "still"){
+            console.log("yayy")
+            newImage.attr('src',imageUrl)
+        
+                
+            } else{
+                
+            }
+            
+            
+            
+            
+            
+            });
+
     });
 
+
+
+
+   
+        
+
+
 }
+
+
+
 
 function getSticker() {
     event.preventDefault();
@@ -53,8 +84,8 @@ function getSticker() {
     //create a div to hold the images
            
             //const the url image 
-            const imageUrl = response.data.image_original_url
-    
+            const imageUrl = response.data.images.original_still.url
+            
             const newImage = $('<img>');
     //and the attribute to the images so that they are changed when they are called
     
@@ -63,7 +94,7 @@ function getSticker() {
             newImage.attr('alt', "new");
     //prepend the images to a div
     
-    
+            
             $('#sticker').prepend(newImage)
     
     
