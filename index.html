@@ -10,27 +10,47 @@
     </style>
 <link rel="stylesheet" href="style.css" >
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
 </head>
 <body background="./images/3438.jpg">
 
 
         <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                  <h1 class="display-4">Anime GIF</h1>
-                  <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                        
+                  <h1 class="display-4">Anime GIPHY </h1>
+                  <p class="lead">Search for your favorite Anime and share it with your friends!.</p>
+                  <img src="images/giphy.gif" style="width: 200px; ">
+                  <img src="images/giphy (1).gif" style="width: 200px; float: right; ">
+                  
+                  
+                  <div id="images"></div>
+
+
+
+        <form id="movie-form" style="text-align: center;">
+                <label for="input"></label>
+                <input type="text" id= "input">
+                <br>
+          
+                <!-- Button triggers new movie to be added -->
+                <input id="add-gif" type="submit" value="Get GIF!">
+                <input id="add-sticker" type="submit" value="Get Sticker!">
+              </form>
                  
                 </div>
+                <div id="addBtn"></div> 
               </div>
 
               
-              <div id="addBtn"></div>
+              
 
 
-    <div class="container">
+    <div class="contain">
 
 
 
-<div id="addBtn"></div>
+
 
 
 
@@ -38,20 +58,12 @@
         <button id="myButton">Search</button> -->
 
 
-        <form id="movie-form">
-                <label for="input">Search Here</label>
-                <input type="text" id= "input">
-                <br>
-          
-                <!-- Button triggers new movie to be added -->
-                <input id="add-gif" type="submit" value="Search">
-              </form>
 
         
        
       
 
-        <div id="images"></div>
+       
         </div>
 
 

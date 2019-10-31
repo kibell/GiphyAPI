@@ -1,8 +1,17 @@
 
     #addBtn {
-      margin: 10px;
-      float: right;
+      margin: 100px;
+     
     }
 
-    
 
+
+.jumbotron{
+background: linear-gradient(to left, skyblue,white);
+font-family: 'McLaren', cursive;
+
+}
+
+h1, .lead{
+  text-align: center;
+}
