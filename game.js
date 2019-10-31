@@ -30,7 +30,7 @@ const ttt = $(this).attr("data-name");
 //prepend the images to a div
 
 
-        $('#images').prepend(newImage)
+        $('#GIF').prepend(newImage)
 
 
 
