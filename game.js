@@ -6,7 +6,7 @@ const choices = ['Naruto', 'Dragon Ball Z','One Piece']
 // call the ajax function and set the varibles for the url 
 function getGif() {
     event.preventDefault();
-    
+    $("#mode").text("GIF MODE")
 const ttt = $(this).attr("data-name");
     const queryURL = `https://api.giphy.com/v1/gifs/random?api_key=do2zG5Nm1SN1Ioh0tMOY6mXWryN8X5yZ&tag=${ttt}&rating=PG-13`;
     $.ajax({
@@ -40,7 +40,7 @@ const ttt = $(this).attr("data-name");
 
 function getSticker() {
     event.preventDefault();
-    
+    $("#mode").text("STICKER MODE!")
     const ttt = $(this).attr("data-name");
         const queryURL = `https://api.giphy.com/v1/stickers/random?api_key=do2zG5Nm1SN1Ioh0tMOY6mXWryN8X5yZ&tag=${ttt}&rating=PG-13`;
         $.ajax({
@@ -133,7 +133,7 @@ $('#addBtn').append(a);
 
 $('#add-gif').on("click", function(event) {
 event.preventDefault();
-
+$("#mode").text("GIF MODE!")
 const inputVal = $('#input').val().trim();
 
 choices.push(inputVal);
@@ -143,7 +143,7 @@ buttonLoop();
 
 $('#add-sticker').on("click", function(event) {
     event.preventDefault();
-    
+    $("#mode").text("STICKER MODE!")
     const inputVal = $('#input').val().trim();
     
     choices.push(inputVal);

@@ -43,3 +43,33 @@ h1, .lead{
   margin-right: auto;
   
 }
+
+#add-sticker:hover{
+background:darkblue;
+color: white;
+margin-top: 5px;
+
+}
+
+#add-gif:hover{
+  background:skyblue;
+  margin-top: 5px;
+  
+  }
+
+  .jiffy-btn:hover {
+    background:skyblue;
+    margin-top: 5px;
+    font-family: 'Indie Flower', cursive
+  }
+
+
+  .sticky-btn:hover{
+    background:darkblue;
+    color: white;
+    margin-top: 5px;
+    font-family: 'Indie Flower', cursive
+
+  }
+
+
