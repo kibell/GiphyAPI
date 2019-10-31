@@ -1,6 +1,6 @@
 //create an array of choices
 
-const choices = ['Lord of the Rings', 'High five!','Way to go']
+const choices = ['Naruto', 'Dragon Ball Z','One Piece']
 
 
 // call the ajax function and set the varibles for the url 
@@ -56,6 +56,7 @@ a.attr("data-name",choices[i]);
 a.text(choices[i]);
 //appen("d the button in the end
 $('#addBtn').append(a);
+$('#addBtn').append($('<br>'));
  }
 }
 //create a function to push the input to an array
