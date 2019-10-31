@@ -36,16 +36,21 @@ const ttt = $(this).attr("data-name");
 
 
 
-        $(document).on("click",'#gifTouch',function(){
+        $('#gifTouch').on("click", function(){
             const state = $(this).attr("class")
-            const imageUrl = response.data.image_original_url
-        
+            const imageAnimate = response.data.image_original_url
+            const imageStill = response.data.images.original_still.url
+
             if (state === "still"){
             console.log("yayy")
-            newImage.attr('src',imageUrl)
+            newImage.attr('src',imageAnimate)
+            newImage.attr('class',"animate")
         
                 
-            } else{
+            } else {
+                console.log("yayy")
+                newImage.attr('src',imageStill)
+                newImage.attr('class',"still") 
                 
             }
             
