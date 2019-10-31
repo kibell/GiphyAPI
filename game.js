@@ -94,7 +94,8 @@ function getSticker() {
             const newImage = $('<img>');
     //and the attribute to the images so that they are changed when they are called
     
-    
+             newImage.attr('id', 'stickTouch')
+            newImage.addClass("still")
             newImage.attr('src',imageUrl)
             newImage.attr('alt', "new");
     //prepend the images to a div
@@ -102,13 +103,33 @@ function getSticker() {
             
             $('#sticker').prepend(newImage)
     
+
+
+
+            $('#stickTouch').on("click", function(){
+                const state = $(this).attr("class")
+                const imageAnimate = response.data.image_original_url
+                const imageStill = response.data.images.original_still.url
+    
+                if (state === "still"){
+                console.log("yayy")
+                newImage.attr('src',imageAnimate)
+                newImage.attr('class',"animate")
+            
+                    
+                } else {
+                    console.log("yayy")
+                    newImage.attr('src',imageStill)
+                    newImage.attr('class',"still") 
+                    
+                }
     
     
         });
     
-    }
+    });
 
-
+}
 
 //create a loop append a new button when the search button is selected
 function buttonLoop () {
